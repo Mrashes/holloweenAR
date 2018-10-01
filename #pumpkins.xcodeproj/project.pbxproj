@@ -15,6 +15,12 @@
 		72A0DC1B21618A4D00E3A703 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72A0DC1921618A4D00E3A703 /* LaunchScreen.storyboard */; };
 		72A0DC2621618A4D00E3A703 /* _pumpkinsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A0DC2521618A4D00E3A703 /* _pumpkinsTests.swift */; };
 		72A0DC3121618A4D00E3A703 /* _pumpkinsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A0DC3021618A4D00E3A703 /* _pumpkinsUITests.swift */; };
+		72A0DC452161991500E3A703 /* HoverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A0DC442161991500E3A703 /* HoverScene.swift */; };
+		72A0DC4821619AF600E3A703 /* Node+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A0DC4721619AF600E3A703 /* Node+Extensions.swift */; };
+		72A0DC4F2161A6AF00E3A703 /* SceneObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A0DC4E2161A6AF00E3A703 /* SceneObject.swift */; };
+		72A0DC522161A78A00E3A703 /* halloween.dae in Resources */ = {isa = PBXBuildFile; fileRef = 72A0DC512161A78A00E3A703 /* halloween.dae */; };
+		72A0DC552161B4E600E3A703 /* halloweenTexture.png in Resources */ = {isa = PBXBuildFile; fileRef = 72A0DC542161B4E600E3A703 /* halloweenTexture.png */; };
+		72A0DC572161BFC000E3A703 /* UtilityExensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A0DC562161BFC000E3A703 /* UtilityExensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +55,12 @@
 		72A0DC2C21618A4D00E3A703 /* #pumpkinsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "#pumpkinsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		72A0DC3021618A4D00E3A703 /* _pumpkinsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _pumpkinsUITests.swift; sourceTree = "<group>"; };
 		72A0DC3221618A4D00E3A703 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		72A0DC442161991500E3A703 /* HoverScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoverScene.swift; sourceTree = "<group>"; };
+		72A0DC4721619AF600E3A703 /* Node+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Node+Extensions.swift"; sourceTree = "<group>"; };
+		72A0DC4E2161A6AF00E3A703 /* SceneObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneObject.swift; sourceTree = "<group>"; };
+		72A0DC512161A78A00E3A703 /* halloween.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; name = halloween.dae; path = ../../../../Downloads/halloween.dae; sourceTree = "<group>"; };
+		72A0DC542161B4E600E3A703 /* halloweenTexture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = halloweenTexture.png; path = ../../../../Downloads/halloweenTexture.png; sourceTree = "<group>"; };
+		72A0DC562161BFC000E3A703 /* UtilityExensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilityExensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +111,10 @@
 		72A0DC0D21618A4A00E3A703 /* #pumpkins */ = {
 			isa = PBXGroup;
 			children = (
+				72A0DC502161A75E00E3A703 /* Models */,
+				72A0DC4D2161A6A800E3A703 /* Objects */,
+				72A0DC4621619ABF00E3A703 /* Utitilties */,
+				72A0DC43216198CB00E3A703 /* Scene */,
 				72A0DC0E21618A4A00E3A703 /* AppDelegate.swift */,
 				72A0DC1021618A4A00E3A703 /* art.scnassets */,
 				72A0DC1221618A4A00E3A703 /* ViewController.swift */,
@@ -126,6 +142,40 @@
 				72A0DC3221618A4D00E3A703 /* Info.plist */,
 			);
 			path = "#pumpkinsUITests";
+			sourceTree = "<group>";
+		};
+		72A0DC43216198CB00E3A703 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				72A0DC442161991500E3A703 /* HoverScene.swift */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		72A0DC4621619ABF00E3A703 /* Utitilties */ = {
+			isa = PBXGroup;
+			children = (
+				72A0DC4721619AF600E3A703 /* Node+Extensions.swift */,
+				72A0DC562161BFC000E3A703 /* UtilityExensions.swift */,
+			);
+			path = Utitilties;
+			sourceTree = "<group>";
+		};
+		72A0DC4D2161A6A800E3A703 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				72A0DC4E2161A6AF00E3A703 /* SceneObject.swift */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
+		72A0DC502161A75E00E3A703 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				72A0DC542161B4E600E3A703 /* halloweenTexture.png */,
+				72A0DC512161A78A00E3A703 /* halloween.dae */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,9 +283,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				72A0DC1121618A4A00E3A703 /* art.scnassets in Resources */,
+				72A0DC522161A78A00E3A703 /* halloween.dae in Resources */,
 				72A0DC1B21618A4D00E3A703 /* LaunchScreen.storyboard in Resources */,
 				72A0DC1821618A4D00E3A703 /* Assets.xcassets in Resources */,
 				72A0DC1621618A4A00E3A703 /* Main.storyboard in Resources */,
+				72A0DC552161B4E600E3A703 /* halloweenTexture.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +312,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72A0DC4F2161A6AF00E3A703 /* SceneObject.swift in Sources */,
+				72A0DC452161991500E3A703 /* HoverScene.swift in Sources */,
+				72A0DC4821619AF600E3A703 /* Node+Extensions.swift in Sources */,
+				72A0DC572161BFC000E3A703 /* UtilityExensions.swift in Sources */,
 				72A0DC1321618A4A00E3A703 /* ViewController.swift in Sources */,
 				72A0DC0F21618A4A00E3A703 /* AppDelegate.swift in Sources */,
 			);

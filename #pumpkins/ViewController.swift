@@ -14,6 +14,20 @@ class ViewController: UIViewController, ARSCNViewDelegate {
 
     @IBOutlet var sceneView: ARSCNView!
     
+    var sceneController = HoverScene()
+    
+    var didInitializeScene: Bool = false
+    
+    
+    func renderer(_ renderer: SCNSceneRenderer, updateAtTime time: TimeInterval) {
+        if let camera = sceneView.session.currentFrame?.camera {
+            didInitializeScene = true
+            let transform = camera.transform
+            let position = SCNVector3(transform.columns.3.x, transform.columns.3.y, transform.columns.3.z)
+            sceneController.makeUpdateCameraPos(towards: position)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,10 +38,16 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         sceneView.showsStatistics = true
         
         // Create a new scene
-        let scene = SCNScene(named: "art.scnassets/halloween.scn")!
+        if let scene = sceneController.scene {
+            sceneView.scene = scene
+        }
         
-        // Set the scene to the view
-        sceneView.scene = scene
+        let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.didTapScreen))
+        self.view.addGestureRecognizer(tapRecognizer)
+//        let scene = SCNScene(named: "art.scnassets/halloween.scn")!
+        
+//        // Set the scene to the view
+//        sceneView.scene = scene
         
         
 //        let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.didTapScreen))
@@ -50,20 +70,40 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         // Pause the view's session
         sceneView.session.pause()
     }
-
     
-//    @objc func didTapScreen(recognizer: UITapGestureRecognizer) {
-//        if didInitializeScene {
-//            if let camera = sceneView.session.currentFrame?.camera {
-//                var translation = matrix_identity_float4x4
-//                translation.columns.3.z = -1.0
-//                let transform = camera.transform * translation
-//                let position = SCNVector3(transform.columns.3.x, transform.columns.3.y, transform.columns.3.z)
-//                sceneController.addSphere(position: position)
-//            }
-//        }
-//    }
-//
+    @objc func didTapScreen(recognizer: UITapGestureRecognizer) {
+        if didInitializeScene, let camera = sceneView.session.currentFrame?.camera {
+            let tapLocation = recognizer.location(in: sceneView)
+            let hitTestResults = sceneView.hitTest(tapLocation)
+            if let node = hitTestResults.first?.node,
+                let scene = sceneController.scene,
+                let pumpkin = node.topmost(until: scene.rootNode) as? Pumpkin {
+                pumpkin.animate()
+            }
+            else {
+                var translation = matrix_identity_float4x4
+                translation.columns.3.z = -5.0
+                let transform = camera.transform * translation
+                let position = SCNVector3(transform.columns.3.x, transform.columns.3.y, transform.columns.3.z)
+                sceneController.addPumpkin(position: position)
+            }
+        }
+    }
+    
+    //        if didInitializeScene, let camera = sceneView.session.currentFrame?.camera {
+    //            let tapLocation = recognizer.location(in: sceneView)
+    //            let hitTestResults = sceneView.hitTest(tapLocation)
+    //            print("intialized")
+    //            if let node = hitTestResults.first?.node, let scene = sceneController.scene, let pumpkin = node.topmost(until: scene.rootNode) as? Pumpkin {
+    //                sceneController.addAnimation(node: pumpkin)
+    //            }
+    //            else {
+    //                var translation = matrix_identity_float4x4
+    //                translation.columns.3.z = -5.0
+    //                let transform = camera.transform * translation
+    //                let position = SCNVector3(transform.columns.3.x, transform.columns.3.y, transform.columns.3.z)
+    //                sceneController.addPumpkin(position: position)
+    //            }
     
     // MARK: - ARSCNViewDelegate
     
@@ -90,6 +130,5 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         // Reset tracking and/or remove existing anchors if consistent tracking is required
         
     }
-    
-    
+
 }
