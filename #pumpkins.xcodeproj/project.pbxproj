@@ -22,10 +22,12 @@
 		72A0DC552161B4E600E3A703 /* halloweenTexture.png in Resources */ = {isa = PBXBuildFile; fileRef = 72A0DC542161B4E600E3A703 /* halloweenTexture.png */; };
 		72A0DC572161BFC000E3A703 /* UtilityExensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A0DC562161BFC000E3A703 /* UtilityExensions.swift */; };
 		72FCF44C216A54C700F63C9E /* Plane.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FCF44B216A54C700F63C9E /* Plane.swift */; };
-		72FCF44E216A5E8300F63C9E /* planeDetection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FCF44D216A5E8200F63C9E /* planeDetection.swift */; };
+		72FCF44E216A5E8300F63C9E /* PlaneDetection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FCF44D216A5E8200F63C9E /* PlaneDetection.swift */; };
 		72FCF452216A69B500F63C9E /* optionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FCF451216A69B500F63C9E /* optionTableViewCell.swift */; };
 		72FCF454216A6C6600F63C9E /* selectableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FCF453216A6C6600F63C9E /* selectableTableViewController.swift */; };
 		72FCF456216A6D7700F63C9E /* option.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FCF455216A6D7700F63C9E /* option.swift */; };
+		72FCF45B216ABEBD00F63C9E /* plane_grid.png in Resources */ = {isa = PBXBuildFile; fileRef = 72FCF45A216ABEBD00F63C9E /* plane_grid.png */; };
+		72FCF45D216AC8EF00F63C9E /* face.png in Resources */ = {isa = PBXBuildFile; fileRef = 72FCF45C216AC8EF00F63C9E /* face.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,10 +69,12 @@
 		72A0DC542161B4E600E3A703 /* halloweenTexture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = halloweenTexture.png; sourceTree = "<group>"; };
 		72A0DC562161BFC000E3A703 /* UtilityExensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilityExensions.swift; sourceTree = "<group>"; };
 		72FCF44B216A54C700F63C9E /* Plane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plane.swift; sourceTree = "<group>"; };
-		72FCF44D216A5E8200F63C9E /* planeDetection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = planeDetection.swift; sourceTree = "<group>"; };
+		72FCF44D216A5E8200F63C9E /* PlaneDetection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaneDetection.swift; sourceTree = "<group>"; };
 		72FCF451216A69B500F63C9E /* optionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = optionTableViewCell.swift; sourceTree = "<group>"; };
 		72FCF453216A6C6600F63C9E /* selectableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = selectableTableViewController.swift; sourceTree = "<group>"; };
 		72FCF455216A6D7700F63C9E /* option.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = option.swift; sourceTree = "<group>"; };
+		72FCF45A216ABEBD00F63C9E /* plane_grid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plane_grid.png; sourceTree = "<group>"; };
+		72FCF45C216AC8EF00F63C9E /* face.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = face.png; path = ../../../../../Pictures/face.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,17 +125,15 @@
 		72A0DC0D21618A4A00E3A703 /* #pumpkins */ = {
 			isa = PBXGroup;
 			children = (
+				72FCF457216AB81600F63C9E /* Deprecated */,
 				72A0DC502161A75E00E3A703 /* Models */,
 				72A0DC4D2161A6A800E3A703 /* Objects */,
 				72A0DC4621619ABF00E3A703 /* Utitilties */,
 				72A0DC43216198CB00E3A703 /* Scene */,
 				72A0DC0E21618A4A00E3A703 /* AppDelegate.swift */,
-				72FCF453216A6C6600F63C9E /* selectableTableViewController.swift */,
-				72FCF451216A69B500F63C9E /* optionTableViewCell.swift */,
-				72FCF455216A6D7700F63C9E /* option.swift */,
 				72A0DC1021618A4A00E3A703 /* art.scnassets */,
 				72A0DC1221618A4A00E3A703 /* ViewController.swift */,
-				72FCF44D216A5E8200F63C9E /* planeDetection.swift */,
+				72FCF44D216A5E8200F63C9E /* PlaneDetection.swift */,
 				72A0DC1421618A4A00E3A703 /* Main.storyboard */,
 				72A0DC1721618A4D00E3A703 /* Assets.xcassets */,
 				72A0DC1921618A4D00E3A703 /* LaunchScreen.storyboard */,
@@ -187,10 +189,22 @@
 		72A0DC502161A75E00E3A703 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				72FCF45C216AC8EF00F63C9E /* face.png */,
+				72FCF45A216ABEBD00F63C9E /* plane_grid.png */,
 				72A0DC542161B4E600E3A703 /* halloweenTexture.png */,
 				72A0DC512161A78A00E3A703 /* halloween.dae */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		72FCF457216AB81600F63C9E /* Deprecated */ = {
+			isa = PBXGroup;
+			children = (
+				72FCF453216A6C6600F63C9E /* selectableTableViewController.swift */,
+				72FCF451216A69B500F63C9E /* optionTableViewCell.swift */,
+				72FCF455216A6D7700F63C9E /* option.swift */,
+			);
+			path = Deprecated;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,7 +313,9 @@
 			files = (
 				72A0DC1121618A4A00E3A703 /* art.scnassets in Resources */,
 				72A0DC522161A78A00E3A703 /* halloween.dae in Resources */,
+				72FCF45D216AC8EF00F63C9E /* face.png in Resources */,
 				72A0DC1B21618A4D00E3A703 /* LaunchScreen.storyboard in Resources */,
+				72FCF45B216ABEBD00F63C9E /* plane_grid.png in Resources */,
 				72A0DC1821618A4D00E3A703 /* Assets.xcassets in Resources */,
 				72A0DC1621618A4A00E3A703 /* Main.storyboard in Resources */,
 				72A0DC552161B4E600E3A703 /* halloweenTexture.png in Resources */,
@@ -336,7 +352,7 @@
 				72A0DC0F21618A4A00E3A703 /* AppDelegate.swift in Sources */,
 				72FCF452216A69B500F63C9E /* optionTableViewCell.swift in Sources */,
 				72FCF456216A6D7700F63C9E /* option.swift in Sources */,
-				72FCF44E216A5E8300F63C9E /* planeDetection.swift in Sources */,
+				72FCF44E216A5E8300F63C9E /* PlaneDetection.swift in Sources */,
 				72FCF44C216A54C700F63C9E /* Plane.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
