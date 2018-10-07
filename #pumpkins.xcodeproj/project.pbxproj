@@ -21,6 +21,7 @@
 		72A0DC522161A78A00E3A703 /* halloween.dae in Resources */ = {isa = PBXBuildFile; fileRef = 72A0DC512161A78A00E3A703 /* halloween.dae */; };
 		72A0DC552161B4E600E3A703 /* halloweenTexture.png in Resources */ = {isa = PBXBuildFile; fileRef = 72A0DC542161B4E600E3A703 /* halloweenTexture.png */; };
 		72A0DC572161BFC000E3A703 /* UtilityExensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A0DC562161BFC000E3A703 /* UtilityExensions.swift */; };
+		72FCF44C216A54C700F63C9E /* Plane.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FCF44B216A54C700F63C9E /* Plane.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		72A0DC512161A78A00E3A703 /* halloween.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; name = halloween.dae; path = ../../../../Downloads/halloween.dae; sourceTree = "<group>"; };
 		72A0DC542161B4E600E3A703 /* halloweenTexture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = halloweenTexture.png; path = ../../../../Downloads/halloweenTexture.png; sourceTree = "<group>"; };
 		72A0DC562161BFC000E3A703 /* UtilityExensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilityExensions.swift; sourceTree = "<group>"; };
+		72FCF44B216A54C700F63C9E /* Plane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plane.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				72A0DC4E2161A6AF00E3A703 /* SceneObject.swift */,
+				72FCF44B216A54C700F63C9E /* Plane.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 				72A0DC572161BFC000E3A703 /* UtilityExensions.swift in Sources */,
 				72A0DC1321618A4A00E3A703 /* ViewController.swift in Sources */,
 				72A0DC0F21618A4A00E3A703 /* AppDelegate.swift in Sources */,
+				72FCF44C216A54C700F63C9E /* Plane.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
